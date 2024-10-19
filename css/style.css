@@ -1,8 +1,5 @@
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
   --blue: #007bff;
@@ -8530,8 +8527,8 @@ h1, h2, h3, h4, h5,
           color: #fff;
           line-height: 1.2;
           font-weight: 800; }
-          .owl-carousel.home-slider .slider-item .slider-text h1 span {
-            font-weight: 800;
+          .owl-carousel.home-slider .slider-item .slider-text h3 span {
+            font-weight: 900;
             color: #ffbd39; }
           @media (max-width: 991.98px) {
             .owl-carousel.home-slider .slider-item .slider-text h1 {

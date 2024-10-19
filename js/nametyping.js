@@ -1,15 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const typingText = document.getElementById('name-text');
-    const textArray = ["Sindiso Ndlovu", "Chris Blvck"];
+    let browserName = navigator.appName;
+    let browserVersion = navigator.appVersion;
+    let userAgent = navigator.userAgent;
+
+    // Get Platform (OS)
+    let platform = navigator.platform;
+
+    // Get Device Memory (if supported)
+    let deviceMemory = navigator.deviceMemory || "Not Available";
+
+    // Get Screen Info
+    let screenWidth = screen.width;
+    let screenHeight = screen.height;
+    let colorDepth = screen.colorDepth;
+
+    let screenSize = "    Resolution : " +screen.width +" x "+ screen.height;
+    let memory = " Memory : "+ navigator.deviceMemory + " GB";
+    let internetSpeed = "  Downlink Speed: " + navigator.connection.downlink + " Mbps";
+
+    const typingText = document.getElementById('mouse');
+    const textArray = [screenSize, memory, internetSpeed];
     let arrayIndex = 0;
     let charIndex = 0;
-
+    console.log(typingText.textContent);
     function type() {
-        
-        if (charIndex < textArray[arrayIndex].length) {
-            console.log(textArray[arrayIndex].charAt(charIndex));
-            typingText.innerHTML += textArray[arrayIndex].charAt(charIndex)+ "_";
+        if (charIndex < textArray[arrayIndex].length+1) {
+            typingText.innerHTML = textArray[arrayIndex].substring(0, charIndex) + "|";
+            console.log(typingText);
             charIndex++;
             setTimeout(type, 150); // Adjust typing speed here
         } else {
