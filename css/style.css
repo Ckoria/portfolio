@@ -1,6 +1,11 @@
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  */
+@font-face {
+  font-family: junigar;
+  src: url("/fonts/danger.otf");
+}
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -58,6 +63,11 @@ body {
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
+
+#my-name {
+  font-family: junigar;
+  letter-spacing: 10px;
+}  
 
 hr {
   -webkit-box-sizing: content-box;

@@ -1,19 +1,25 @@
 (function(){
-    emailjs.init("S-xzMs8CE5bJDZTr5");
+    emailjs.init("sjrVTDnJz5XCftztQ");  // Initialize EmailJS 
 })();
 
-function sendEmail() {
+function sendEmail(event) {
+    event.preventDefault();  // Prevent form from submitting/reloading the page
+
     var templateParams = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
-        phone: document.getElementById("phone").value,
+        phone: document.getElementById("phone").value,  // Fixed subject id reference
+        subject: document.getElementById("subject").value,  // Fixed subject id reference
         message: document.getElementById("message").value
     };
-
-    // Log the template params to ensure they are being populated correctly
-    emailjs.send("service_ahftsii", "template_74zl8gs", templateParams)
+    let msg = document.getElementById("feedback-msg");
+    emailjs.send("service_ho763x9", "template_u5wtgtp", templateParams)
         .then(function(response) {
+            msg.style.backgroundColor = "green";
+            msg.value = "SUCCESS! Your message has been sent.";
         }, function(error) {
-            alert("FAILED. Error: " + error.text);
+            msg.style.backgroundColor = "red";
+            msg.value = "FAILED. Error: " + error.text;
         });
+
 }
