@@ -44,6 +44,5 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(type, 500); // Pause before typing the next word
         }
     }
-
     type();
 });
