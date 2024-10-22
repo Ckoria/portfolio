@@ -16,7 +16,7 @@ function sendEmail(event) {
     emailjs.send("service_ho763x9", "template_u5wtgtp", templateParams)
         .then(function(response) {
             msg.style.backgroundColor = "green";
-            msg.value = "SUCCESS! Your message has been sent.";
+            msg.value = `Thanks for reaching out, ${templateParams["name"]} 😉!`;
         }, function(error) {
             msg.style.backgroundColor = "red";
             msg.value = "FAILED. Error: " + error.text;
