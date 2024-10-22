@@ -36,7 +36,7 @@ function getIP(starNumber){
 // send the payload to python server
 function addRatingToServer(rating, ipAddress) {
     if(rating) {
-        fetch('http://127.0.0.1:5000/add_rating', {
+        fetch('https://custom-apis-k8yj.onrender.com/add_rating', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ function addRatingToServer(rating, ipAddress) {
 }
 
 async function getRatings(){
-    fetch('http://127.0.0.1:5000/get_ratings', {
+    fetch('https://custom-apis-k8yj.onrender.com/get_ratings', {
         method: 'GET',
         headers: {
             'api-key':'jhfdjkg$vwegkashbh-eierbewkgjrioggegj4923n346mtl436ng_sl346iymkwerymywekl-ywywkl-wer'
